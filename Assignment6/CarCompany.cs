@@ -203,10 +203,11 @@ namespace Assignment6
             try
             {
                 int id = int.Parse(txtCompanyId.Text);
+                string name = txtCompanyName.Text;
                 string address = txtAddress.Text;
                 string phone = txtPhoneNumber.Text;
 
-                Company company = new Company(id, address, phone);
+                Company company = new Company(id, name,address, phone);
                 RemoveDuplicateCompany(id);
 
                 lblMessagCompany.Text = companyController.AddNewCompany(company);
@@ -278,6 +279,7 @@ namespace Assignment6
                 }
 
                 txtCompanyId.Text = oldCompany.Id.ToString();
+                txtCompanyName.Text = oldCompany.Name;
                 txtAddress.Text = oldCompany.Address;
                 txtPhoneNumber.Text = oldCompany.PhoneNumber.ToString();
 

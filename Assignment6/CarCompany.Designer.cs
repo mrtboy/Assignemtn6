@@ -90,6 +90,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.showAllCarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtCompanyName = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.pTopup.SuspendLayout();
             this.pAddNewCar.SuspendLayout();
@@ -162,14 +164,14 @@
             // addCarToolStripMenuItem
             // 
             this.addCarToolStripMenuItem.Name = "addCarToolStripMenuItem";
-            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addCarToolStripMenuItem.Text = "Add Car";
             this.addCarToolStripMenuItem.Click += new System.EventHandler(this.addCarToolStripMenuItem_Click);
             // 
             // editCarToolStripMenuItem
             // 
             this.editCarToolStripMenuItem.Name = "editCarToolStripMenuItem";
-            this.editCarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.editCarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editCarToolStripMenuItem.Text = "Edit Car";
             this.editCarToolStripMenuItem.Click += new System.EventHandler(this.editCarToolStripMenuItem_Click);
             // 
@@ -477,6 +479,8 @@
             // 
             // pCompanyManagement
             // 
+            this.pCompanyManagement.Controls.Add(this.txtCompanyName);
+            this.pCompanyManagement.Controls.Add(this.label15);
             this.pCompanyManagement.Controls.Add(this.label8);
             this.pCompanyManagement.Controls.Add(this.txtAddress);
             this.pCompanyManagement.Controls.Add(this.lblMessagCompany);
@@ -508,7 +512,7 @@
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(230, 109);
+            this.txtAddress.Location = new System.Drawing.Point(230, 148);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(362, 89);
@@ -517,7 +521,7 @@
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(230, 204);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(230, 243);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(362, 26);
             this.txtPhoneNumber.TabIndex = 46;
@@ -525,7 +529,7 @@
             // txtCompanyId
             // 
             this.txtCompanyId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompanyId.Location = new System.Drawing.Point(230, 77);
+            this.txtCompanyId.Location = new System.Drawing.Point(230, 61);
             this.txtCompanyId.Name = "txtCompanyId";
             this.txtCompanyId.Size = new System.Drawing.Size(362, 26);
             this.txtCompanyId.TabIndex = 45;
@@ -534,7 +538,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(75, 207);
+            this.label9.Location = new System.Drawing.Point(75, 246);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(115, 20);
             this.label9.TabIndex = 44;
@@ -544,7 +548,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(75, 137);
+            this.label10.Location = new System.Drawing.Point(75, 176);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 20);
             this.label10.TabIndex = 43;
@@ -554,7 +558,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(75, 83);
+            this.label11.Location = new System.Drawing.Point(75, 61);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(94, 20);
             this.label11.TabIndex = 42;
@@ -719,6 +723,24 @@
             this.showAllCarsToolStripMenuItem.Text = "Show All Cars";
             this.showAllCarsToolStripMenuItem.Click += new System.EventHandler(this.showAllCarsToolStripMenuItem_Click);
             // 
+            // txtCompanyName
+            // 
+            this.txtCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompanyName.Location = new System.Drawing.Point(230, 100);
+            this.txtCompanyName.Name = "txtCompanyName";
+            this.txtCompanyName.Size = new System.Drawing.Size(362, 26);
+            this.txtCompanyName.TabIndex = 50;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(75, 106);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(51, 20);
+            this.label15.TabIndex = 49;
+            this.label15.Text = "Name";
+            // 
             // CarCompany
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -817,5 +839,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolStripMenuItem showAllCarsToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtCompanyName;
+        private System.Windows.Forms.Label label15;
     }
 }
