@@ -34,8 +34,6 @@
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblLoginTitle = new System.Windows.Forms.Label();
-            this.lblRegisterTitle = new System.Windows.Forms.Label();
-            this.btnSignUp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -104,40 +102,11 @@
             this.lblLoginTitle.TabIndex = 5;
             this.lblLoginTitle.Text = "Login User";
             // 
-            // lblRegisterTitle
-            // 
-            this.lblRegisterTitle.AutoSize = true;
-            this.lblRegisterTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegisterTitle.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblRegisterTitle.Location = new System.Drawing.Point(265, 37);
-            this.lblRegisterTitle.Name = "lblRegisterTitle";
-            this.lblRegisterTitle.Size = new System.Drawing.Size(138, 37);
-            this.lblRegisterTitle.TabIndex = 6;
-            this.lblRegisterTitle.Text = "Sign Up";
-            // 
-            // btnSignUp
-            // 
-            this.btnSignUp.BackColor = System.Drawing.Color.BlueViolet;
-            this.btnSignUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignUp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSignUp.Location = new System.Drawing.Point(300, 253);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(130, 41);
-            this.btnSignUp.TabIndex = 7;
-            this.btnSignUp.Text = "Sign Up";
-            this.btnSignUp.UseVisualStyleBackColor = false;
-            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 422);
-            this.Controls.Add(this.btnSignUp);
-            this.Controls.Add(this.lblRegisterTitle);
             this.Controls.Add(this.lblLoginTitle);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUserName);
@@ -159,8 +128,6 @@
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblLoginTitle;
-        private System.Windows.Forms.Label lblRegisterTitle;
-        private System.Windows.Forms.Button btnSignUp;
     }
 }
 

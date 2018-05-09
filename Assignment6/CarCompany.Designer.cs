@@ -34,9 +34,11 @@
             this.companyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addComapnyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateCompanyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showCarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showAllCarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblCarId = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,6 +60,7 @@
             this.lblMessagCompany = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.pTopup = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.txtIdToChange = new System.Windows.Forms.TextBox();
             this.lblEdit = new System.Windows.Forms.Label();
             this.btnIdToChange = new System.Windows.Forms.Button();
@@ -67,6 +70,8 @@
             this.listCars = new System.Windows.Forms.ListView();
             this.listCompanies = new System.Windows.Forms.ListView();
             this.pCompanyManagement = new System.Windows.Forms.Panel();
+            this.txtCompanyName = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
@@ -78,20 +83,15 @@
             this.btnCloseComapny = new System.Windows.Forms.Button();
             this.btnSubmitCompany = new System.Windows.Forms.Button();
             this.pGetId = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.txtIdCompanyToChange = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.btnSubmitIdToChange = new System.Windows.Forms.Button();
-            this.showCarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pShowCarsInCompany = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.txtShowCarsId = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.showAllCarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtCompanyName = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.pTopup.SuspendLayout();
             this.pAddNewCar.SuspendLayout();
@@ -140,16 +140,23 @@
             // addComapnyToolStripMenuItem
             // 
             this.addComapnyToolStripMenuItem.Name = "addComapnyToolStripMenuItem";
-            this.addComapnyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addComapnyToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.addComapnyToolStripMenuItem.Text = "Add Comapny";
             this.addComapnyToolStripMenuItem.Click += new System.EventHandler(this.addComapnyToolStripMenuItem_Click);
             // 
             // updateCompanyToolStripMenuItem
             // 
             this.updateCompanyToolStripMenuItem.Name = "updateCompanyToolStripMenuItem";
-            this.updateCompanyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateCompanyToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.updateCompanyToolStripMenuItem.Text = "Update Company";
             this.updateCompanyToolStripMenuItem.Click += new System.EventHandler(this.updateCompanyToolStripMenuItem_Click);
+            // 
+            // showCarsToolStripMenuItem
+            // 
+            this.showCarsToolStripMenuItem.Name = "showCarsToolStripMenuItem";
+            this.showCarsToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.showCarsToolStripMenuItem.Text = "Show Cars";
+            this.showCarsToolStripMenuItem.Click += new System.EventHandler(this.showCarsToolStripMenuItem_Click);
             // 
             // carsToolStripMenuItem
             // 
@@ -164,16 +171,23 @@
             // addCarToolStripMenuItem
             // 
             this.addCarToolStripMenuItem.Name = "addCarToolStripMenuItem";
-            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.addCarToolStripMenuItem.Text = "Add Car";
             this.addCarToolStripMenuItem.Click += new System.EventHandler(this.addCarToolStripMenuItem_Click);
             // 
             // editCarToolStripMenuItem
             // 
             this.editCarToolStripMenuItem.Name = "editCarToolStripMenuItem";
-            this.editCarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editCarToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.editCarToolStripMenuItem.Text = "Edit Car";
             this.editCarToolStripMenuItem.Click += new System.EventHandler(this.editCarToolStripMenuItem_Click);
+            // 
+            // showAllCarsToolStripMenuItem
+            // 
+            this.showAllCarsToolStripMenuItem.Name = "showAllCarsToolStripMenuItem";
+            this.showAllCarsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.showAllCarsToolStripMenuItem.Text = "Show All Cars";
+            this.showAllCarsToolStripMenuItem.Click += new System.EventHandler(this.showAllCarsToolStripMenuItem_Click);
             // 
             // lblCarId
             // 
@@ -382,6 +396,16 @@
             this.pTopup.Size = new System.Drawing.Size(290, 131);
             this.pTopup.TabIndex = 38;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(166, 94);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Cancel";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // txtIdToChange
             // 
             this.txtIdToChange.Location = new System.Drawing.Point(93, 52);
@@ -498,6 +522,24 @@
             this.pCompanyManagement.TabIndex = 40;
             this.pCompanyManagement.Paint += new System.Windows.Forms.PaintEventHandler(this.pCompanyManagement_Paint);
             // 
+            // txtCompanyName
+            // 
+            this.txtCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompanyName.Location = new System.Drawing.Point(230, 100);
+            this.txtCompanyName.Name = "txtCompanyName";
+            this.txtCompanyName.Size = new System.Drawing.Size(362, 26);
+            this.txtCompanyName.TabIndex = 101;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(75, 106);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(51, 20);
+            this.label15.TabIndex = 49;
+            this.label15.Text = "Name";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -516,7 +558,7 @@
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(362, 89);
-            this.txtAddress.TabIndex = 47;
+            this.txtAddress.TabIndex = 102;
             // 
             // txtPhoneNumber
             // 
@@ -524,7 +566,7 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(230, 243);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(362, 26);
-            this.txtPhoneNumber.TabIndex = 46;
+            this.txtPhoneNumber.TabIndex = 103;
             // 
             // txtCompanyId
             // 
@@ -532,7 +574,7 @@
             this.txtCompanyId.Location = new System.Drawing.Point(230, 61);
             this.txtCompanyId.Name = "txtCompanyId";
             this.txtCompanyId.Size = new System.Drawing.Size(362, 26);
-            this.txtCompanyId.TabIndex = 45;
+            this.txtCompanyId.TabIndex = 100;
             // 
             // label9
             // 
@@ -572,7 +614,7 @@
             this.btnDeleteCompany.Location = new System.Drawing.Point(263, 326);
             this.btnDeleteCompany.Name = "btnDeleteCompany";
             this.btnDeleteCompany.Size = new System.Drawing.Size(118, 38);
-            this.btnDeleteCompany.TabIndex = 41;
+            this.btnDeleteCompany.TabIndex = 105;
             this.btnDeleteCompany.Text = "Delete";
             this.btnDeleteCompany.UseVisualStyleBackColor = false;
             this.btnDeleteCompany.Click += new System.EventHandler(this.btnDeleteCompany_Click);
@@ -585,7 +627,7 @@
             this.btnCloseComapny.Location = new System.Drawing.Point(425, 326);
             this.btnCloseComapny.Name = "btnCloseComapny";
             this.btnCloseComapny.Size = new System.Drawing.Size(118, 38);
-            this.btnCloseComapny.TabIndex = 40;
+            this.btnCloseComapny.TabIndex = 106;
             this.btnCloseComapny.Text = "Close";
             this.btnCloseComapny.UseVisualStyleBackColor = false;
             this.btnCloseComapny.Click += new System.EventHandler(this.btnCloseComapny_Click);
@@ -598,7 +640,7 @@
             this.btnSubmitCompany.Location = new System.Drawing.Point(105, 326);
             this.btnSubmitCompany.Name = "btnSubmitCompany";
             this.btnSubmitCompany.Size = new System.Drawing.Size(118, 38);
-            this.btnSubmitCompany.TabIndex = 39;
+            this.btnSubmitCompany.TabIndex = 104;
             this.btnSubmitCompany.Text = "Submit";
             this.btnSubmitCompany.UseVisualStyleBackColor = false;
             this.btnSubmitCompany.Click += new System.EventHandler(this.btnSubmitCompany_Click);
@@ -613,6 +655,16 @@
             this.pGetId.Name = "pGetId";
             this.pGetId.Size = new System.Drawing.Size(290, 131);
             this.pGetId.TabIndex = 39;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(157, 94);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtIdCompanyToChange
             // 
@@ -641,13 +693,6 @@
             this.btnSubmitIdToChange.UseVisualStyleBackColor = true;
             this.btnSubmitIdToChange.Click += new System.EventHandler(this.btnSubmitIdToChange_Click);
             // 
-            // showCarsToolStripMenuItem
-            // 
-            this.showCarsToolStripMenuItem.Name = "showCarsToolStripMenuItem";
-            this.showCarsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.showCarsToolStripMenuItem.Text = "Show Cars";
-            this.showCarsToolStripMenuItem.Click += new System.EventHandler(this.showCarsToolStripMenuItem_Click);
-            // 
             // pShowCarsInCompany
             // 
             this.pShowCarsInCompany.Controls.Add(this.button2);
@@ -658,6 +703,16 @@
             this.pShowCarsInCompany.Name = "pShowCarsInCompany";
             this.pShowCarsInCompany.Size = new System.Drawing.Size(290, 131);
             this.pShowCarsInCompany.TabIndex = 40;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(170, 94);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtShowCarsId
             // 
@@ -685,61 +740,6 @@
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(157, 94);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(170, 94);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(166, 94);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Cancel";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // showAllCarsToolStripMenuItem
-            // 
-            this.showAllCarsToolStripMenuItem.Name = "showAllCarsToolStripMenuItem";
-            this.showAllCarsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.showAllCarsToolStripMenuItem.Text = "Show All Cars";
-            this.showAllCarsToolStripMenuItem.Click += new System.EventHandler(this.showAllCarsToolStripMenuItem_Click);
-            // 
-            // txtCompanyName
-            // 
-            this.txtCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompanyName.Location = new System.Drawing.Point(230, 100);
-            this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(362, 26);
-            this.txtCompanyName.TabIndex = 50;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(75, 106);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(51, 20);
-            this.label15.TabIndex = 49;
-            this.label15.Text = "Name";
             // 
             // CarCompany
             // 

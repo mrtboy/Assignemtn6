@@ -19,31 +19,36 @@ namespace Assignment6
         {
             InitializeComponent();
             userController = new UserController();
-            lblLoginTitle.Hide();
-            btnLogin.Hide();
             
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            User user = new User(txtUserName.Text, txtPassword.Text);
-            if (userController.Login(user))
+            try
             {
-                CarCompany cc = new CarCompany();
-                cc.Show();
-                this.Hide();
+                User user = new User(txtUserName.Text, txtPassword.Text);
+                if (userController.Login(user))
+                {
+                    CarCompany cc = new CarCompany();
+                    cc.Show();
+                    this.Hide();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
+           
         }
 
-        private void btnSignUp_Click(object sender, EventArgs e)
-        {
-            User user = new User(txtUserName.Text, txtUserName.Text);
-            userController.Register(user);
+        //private void btnSignUp_Click(object sender, EventArgs e)
+        //{
+        //    User user = new User(txtUserName.Text, txtUserName.Text);
+        //    userController.Register(user);
 
-            lblRegisterTitle.Hide();
-            btnSignUp.Hide();
-            btnLogin.Show();
-           lblLoginTitle.Show();
-        }
+        //    //lblRegisterTitle.Hide();
+        //    //btnSignUp.Hide();
+        //    btnLogin.Show();
+        //   lblLoginTitle.Show();
+        //}
     }
 }
