@@ -31,5 +31,12 @@ namespace Assignment6.Models
             IsAvailable = isAvailable;
             CompanyId = companyId;
         }
+
+        public override string ToString()
+        {
+            string result = "Car Id: " + Id + " Brand: " + Brand + " Model: " + Model + " Manufacturing Year: " + ManufacturingYear + " Mileage: " + 
+                Mileage + " Price: " + " Availability: " + IsAvailable + " Company ID: " + CompanyId;
+            return result;
+        }
     }
 }

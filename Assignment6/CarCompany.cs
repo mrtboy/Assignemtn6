@@ -23,15 +23,35 @@ namespace Assignment6
 
         private void CarCompany_Load(object sender, EventArgs e)
         {
-            gbAddNewCar.Hide();
+            pAddNewCar.Hide();
+            pTopup.Hide();
+            
+            UpdatePanels();
+            
+            //TODO:: Get Company Data
+        }
+
+        private void UpdatePanels()
+        {
+            listCars.Items.Clear();
+            foreach (Car c in carController.GetCars())
+                listCars.Items.Add(c.ToString());
         }
 
         private void addCarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            gbAddNewCar.Show();
+            pAddNewCar.Show();
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+    
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            ClearAddCarPabel();
+            pAddNewCar.Hide();
+        }
+
+        private void btnSubmit_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -49,18 +69,101 @@ namespace Assignment6
 
                 int companyId = int.Parse(cbCompanyID.Text);
 
+                RemoveDuplicateCar(carId);
+
                 Car car = new Car(carId, brand, model, date, mileage, price, availability, companyId);
                 lblMessage.Text = carController.AddNewCar(car);
-            }catch(Exception ex)
+                ClearAddCarPabel();
+
+                UpdatePanels();
+
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+        }
+
+        private void editCarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pTopup.Show();
+            btnDelete.Show();
+        }
+
+        private void ClearAddCarPabel()
+        {
+            txtCarId.Text = "";
+            txtBrand.Text = "";
+            TxtModel.Text = "";
+            dateYear.Text = "";
+            txtMileage.Text = "";
+            txtPrice.Text = "";
+            cbCompanyID.Text = "";
+        }
+
+        private void btnIdToChange_Click(object sender, EventArgs e)
+        {
+            pTopup.Hide();
+            pAddNewCar.Show();
+
+            int id = int.Parse(txtIdToChange.Text);
+            Car oldCar = new Car();
+            
+            foreach(Car c in carController.GetCars())
+            {
+                if(c.Id == id)
+                {
+                    oldCar = c;
+                }
+            }
+
+            txtCarId.Text = oldCar.Id.ToString();
+            txtBrand.Text = oldCar.Brand;
+            TxtModel.Text = oldCar.Model;
+            dateYear.Text = oldCar.ManufacturingYear.ToLongTimeString() ;
+            txtMileage.Text = oldCar.Mileage.ToString();
+            txtPrice.Text = oldCar.Price.ToString();
+            cbCompanyID.Text = oldCar.CompanyId.ToString();
+        }
+
+        private string RemoveDuplicateCar(int id)
+        {
+            bool flag = false;
+            foreach (Car c in carController.GetCars())
+            {
+                if (c.Id == id)
+                {
+                    carController.DeleteCar(id);
+                    flag = true;
+                }
+            }
+
+            if (!flag)
+            {
+                return "There are no Car with this ID";
+            }
+            return "Car Deleted";
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = int.Parse(txtCarId.Text);
+                lblMessage.Text = RemoveDuplicateCar(id);
+                UpdatePanels();
+            }
+            catch (Exception ex)
             {
                 lblMessage.Text = ex.Message;
             }
             
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void findCarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            gbAddNewCar.Hide();
+
         }
+
     }
 }

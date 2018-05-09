@@ -11,7 +11,7 @@ namespace Assignment6.Data
     {
         string AddCar(Car car);
         List<Car> GetCars();
-        string UpdateCar(int id);
+        string UpdateCar(Car car);
         string DeleteCar(int id);
     }
 }

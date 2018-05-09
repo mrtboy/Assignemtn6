@@ -10,9 +10,9 @@ namespace Assignment6.Data
 {
     class CarData : ICarData
     {
+        string path = String.Format(@".\{0}.xml", "Car");
         public string AddCar(Car car)
         {
-            string path = String.Format(@".\{0}.xml", "Car");
             List<Car> cars = new List<Car>();
             if (File.Exists(path))
             {
@@ -25,17 +25,36 @@ namespace Assignment6.Data
 
         public string DeleteCar(int id)
         {
-            throw new NotImplementedException();
+            List<Car> newCars = new List<Car>();
+            List<Car> cars = XMLReadWrite.ReadXML<List<Car>>(path);
+            foreach (Car c in cars)
+            {
+                if (c.Id != id)
+                {
+                    newCars.Add(c);
+                }
+            }
+            XMLReadWrite.WriteXML<List<Car>>(newCars, path);
+            return "";
         }
 
         public List<Car> GetCars()
         {
-            throw new NotImplementedException();
+            return XMLReadWrite.ReadXML<List<Car>>(path);
         }
 
-        public string UpdateCar(int id)
+        public string UpdateCar(Car car)
         {
-            throw new NotImplementedException();
+            List<Car> newCars = new List<Car>();
+            List<Car> cars = XMLReadWrite.ReadXML<List<Car>>(path);
+            foreach(Car c in cars)
+            {
+                if(c.Id != car.Id)
+                {
+                    newCars.Add(c);
+                }
+            }
+            return "";
         }
     }
 }

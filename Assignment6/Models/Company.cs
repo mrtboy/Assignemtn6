@@ -20,5 +20,11 @@ namespace Assignment6.Models
             Address = address;
             PhoneNumber = phoneNumber;
         }
+
+        public override string ToString()
+        {
+            string result = "Company ID: " + Id + " Address: " + Address + " Phone Number: " + PhoneNumber;
+            return result;
+        }
     }
 }

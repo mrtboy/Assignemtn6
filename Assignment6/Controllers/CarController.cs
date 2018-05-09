@@ -24,17 +24,17 @@ namespace Assignment6.Controllers
 
         public string DeleteCar(int id)
         {
-            throw new NotImplementedException();
+            return data.DeleteCar(id);
         }
 
-        public string EditCar(int id)
+        public string EditCar(Car car)
         {
-            throw new NotImplementedException();
+            return data.UpdateCar(car);
         }
 
         public List<Car> GetCars()
         {
-            throw new NotImplementedException();
+            return data.GetCars();
         }
     }
 }

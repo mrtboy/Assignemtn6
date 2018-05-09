@@ -10,7 +10,7 @@ namespace Assignment6.Controllers
     public interface ICarController 
     {
         string AddNewCar(Car car);
-        string EditCar(int id);
+        string EditCar(Car car);
         List<Car> GetCars();
         string DeleteCar(int id);
 
